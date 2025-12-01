@@ -9,7 +9,7 @@ WebNav Hub 是一个现代化的、响应式的单页静态导航网站，旨在
 - **平滑滚动**：点击导航菜单可平滑滚动至对应分类。
 - **分类清晰**：资源按类别分组（AI搜索、社交媒体、实用工具等），查找方便。
 - **轻量级**：纯静态页面，无复杂依赖，加载速度快。
-- **容器化支持**：内置 Docker 支持，可轻松部署到任何容器平台（如 Koyeb）。
+- **Node.js 支持**：配置了 `package.json`，支持通过 Node.js 环境快速部署（如 Koyeb）。
 
 ## 🛠️ 技术栈
 
@@ -17,7 +17,7 @@ WebNav Hub 是一个现代化的、响应式的单页静态导航网站，旨在
 - **CSS3**: 使用 CSS 变量管理主题，Flexbox 和 Grid 布局实现响应式排版。
 - **JavaScript**: 原生 JS 实现交互逻辑（导航高亮、平滑滚动）。
 - **Font Awesome**: 提供丰富的图标支持。
-- **Docker & Nginx**: 用于容器化部署和静态资源服务。
+- **Node.js & Serve**: 使用 `serve` 包提供静态资源服务。
 
 ## 🚀 快速开始
 
@@ -25,22 +25,22 @@ WebNav Hub 是一个现代化的、响应式的单页静态导航网站，旨在
 
 由于是纯静态文件，你可以直接双击 `index.html` 在浏览器中打开即可预览。
 
-### 本地运行 (Docker)
+### 本地运行 (Node.js)
 
-如果你想在本地模拟服务器环境，可以使用 Docker：
+如果你想在本地模拟服务器环境，可以使用 Node.js：
 
-1.  **构建镜像**：
+1.  **安装依赖**：
     ```bash
-    docker build -t webnav .
+    npm install
     ```
 
-2.  **运行容器**：
+2.  **启动服务**：
     ```bash
-    docker run -d -p 8080:80 webnav
+    npm start
     ```
 
 3.  **访问**：
-    打开浏览器访问 `http://localhost:8080`。
+    打开浏览器访问 `http://localhost:3000`。
 
 ## 📦 部署指南
 
@@ -64,8 +64,7 @@ WebNav Hub 是一个现代化的、响应式的单页静态导航网站，旨在
 ```
 .
 ├── index.html          # 主页面文件 (包含 HTML, CSS, JS)
-├── Dockerfile          # Docker 构建文件
-├── .dockerignore       # Docker 构建忽略规则
+├── package.json        # Node.js 项目配置文件
 └── README.md           # 项目说明文档
 ```
 
