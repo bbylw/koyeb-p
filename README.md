@@ -44,7 +44,7 @@ WebNav Hub 是一个现代化的、响应式的单页静态导航网站，旨在
 
 ## 📦 部署指南
 
-本项目已配置好 Docker 环境，非常适合部署到支持容器的云平台，例如 **Koyeb**。
+本项目已配置为 Node.js 项目，非常适合部署到支持 Buildpacks 的云平台，例如 **Koyeb**。
 
 ### 部署到 Koyeb
 
@@ -53,8 +53,11 @@ WebNav Hub 是一个现代化的、响应式的单页静态导航网站，旨在
 3.  点击 **Create App**。
 4.  选择 **GitHub** 作为部署源。
 5.  选择你 Fork 的 `webnav` 仓库。
-6.  Koyeb 会自动检测到 `Dockerfile` 并开始构建。
-7.  等待构建完成，你的导航站就上线了！
+6.  **重要**：在 **Builder** 设置中，选择 **Buildpacks** (通常是默认值)。
+    *   Koyeb 会自动检测到 `package.json` 并使用 Node.js 构建。
+    *   **不要**选择 Docker。
+7.  点击 **Deploy**。
+8.  等待构建完成，你的导航站就上线了！
 
 ## 📂 项目结构
 

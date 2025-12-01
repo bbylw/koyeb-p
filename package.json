@@ -1,0 +1,19 @@
+{
+  "name": "webnav-hub",
+  "version": "1.0.0",
+  "description": "A responsive static navigation website",
+  "main": "index.html",
+  "scripts": {
+    "start": "serve ."
+  },
+  "dependencies": {
+    "serve": "^14.2.1"
+  },
+  "keywords": [
+    "navigation",
+    "static",
+    "website"
+  ],
+  "author": "",
+  "license": "ISC"
+}
